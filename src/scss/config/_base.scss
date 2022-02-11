@@ -5,9 +5,9 @@ html, body {
 
 body {
 	line-height: 1;
-	font-family: $fontFamily;
+	font-family: $defaultFontFamily;
 	font-size: $fontSize;
-	color: $mainColor;
+	color: $black;
 	overflow-x: hidden;
 	text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
@@ -15,7 +15,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: $grey;
+	background: $white;
 
 	.lock & {
 		overflow: hidden;
@@ -25,9 +25,7 @@ body {
 // * * * Page Layout
 .wrapper {
 	min-height: 100%;
-	display: grid;
 	overflow: hidden;
-	grid-template-rows: 1fr auto;
 
 	// * Page is loaded
 	.loaded & {
@@ -55,9 +53,9 @@ body {
 			box-sizing: content-box;
 			margin: 0 auto;
 
-			@media(min-width: em(1920)) {
-				max-width: rem($hdWidth);
-			}
+			// @media(min-width: em(1920)) {
+			// 	max-width: rem($hdWidth);
+			// }
 		}
 		@if ($containerPadding>0) {
 			padding: 0 rem(math.div($containerPadding, 2));

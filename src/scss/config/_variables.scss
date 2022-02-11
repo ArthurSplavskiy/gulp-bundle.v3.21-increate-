@@ -8,20 +8,20 @@
 }
 
 // * * * Default font
-$fontFamily: "Geometria";
-$fontSize: rem(16); // где 14(px) - размер шрифта по умолчанию из макета
+$defaultFontFamily: "Montserrat", Arial, Helvetica, sans-serif;
+
+$fontSize: rem(16); // где 16(px) - размер шрифта по умолчанию из макета
 
 // * * * Settings
 // * Page minimal width
 $minWidth: 320;
 // * Frame width (maket)
-$maxWidth: 1280;
+$maxWidth: 1440;
 // * Page container width (0 = without container)
-$maxWidthContainer: 1112;
-$hdWidth: 1600;
+$maxWidthContainer: 1216;
 // * Container padding
 // (30 = 15px left and right, 0 = without padding)
-$containerPadding: 32;
+$containerPadding: 40;
 // * Adaptive type:
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
 // 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
@@ -36,21 +36,14 @@ $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
 // * * * Colors
 // * Main text color
-$mainColor: #1E1E1E;
-$lightBlack: #383F43;
-$grey: #B7BDC0;
-$grey2: #333333;
-$grey-input:#4F4F4F;
-$green: #3F9A70;
-$lightGreen:#5FC194;
+$woodsmoke: #181A1E;
+$bazaar: #9F8888;
 $white: #ffffff;
 $black: #000000;
 $red: #EB5757;
 
 // * trabsition
-$tf: 0.6s cubic-bezier(.215,.61,.355,1);
-$tf2: 1s cubic-bezier(0.23, 1, 0.32, 1);
-$scrollAnimDelay: 0.2s;
+$defaultTransition: 0.3s ease;
 
 // * z-indexes
 $z-indexes: (

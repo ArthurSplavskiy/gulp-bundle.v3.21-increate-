@@ -97,8 +97,40 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+%link-hover {
+	transition: color $defaultTransition;
 
-// * Fonts
+	&:hover {
+		color: $bazaar;
+	}
+}
+
+// * * * Fonts
+
+// * 12
+%Montserrat12-16-medium {
+	font-family: $defaultFontFamily;
+	font-size: rem(12);
+	line-height: rem(14);
+	font-weight: 500;
+
+	@media(max-width: $mobileSmall) {
+		font-size: rem(16);
+		line-height: rem(24);
+	}
+}
+
+// * 14
+%Montserrat14-semibold {
+	font-family: $defaultFontFamily;
+	font-size: rem(14);
+	line-height: 100%;
+	font-weight: 600;
+}
+
+
+
+
 %geometria12-10-regular {
 	font-family: inherit;
 	font-size: rem(12);

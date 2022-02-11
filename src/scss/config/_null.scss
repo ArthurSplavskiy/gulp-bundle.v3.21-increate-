@@ -13,11 +13,11 @@
   	-webkit-tap-highlight-color: transparent;
 }
 ::selection {
-    background-color: #3F9A70;
+    background-color: #9F8888;
     color: white;
 }
 ::-moz-selection {
-    background-color: #3F9A70;
+    background-color: #9F8888;
     color: white;
 }
 :focus,
@@ -69,7 +69,7 @@ input:-webkit-autofill:focus {
 input,
 button,
 textarea {
-	font-family: $fontFamily;
+	font-family: $defaultFontFamily;
 	font-size: inherit;
 }
 button {

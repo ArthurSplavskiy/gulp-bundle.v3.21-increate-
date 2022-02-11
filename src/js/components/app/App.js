@@ -1,3 +1,5 @@
+import { isTarget, removeClasses } from '../../core/utils/functions.js'
+
 export default class App {
     constructor () {
         this.scrollIsViewElements = document.querySelectorAll('[data-is-view]') ?? null
@@ -77,6 +79,16 @@ export default class App {
                     this.menuTimeline.reverse()
                 }
             }
+        }
+        /*  
+            * Sublist open
+        */
+        const $sublist = isTarget(targetElement, '[data-subtrigger]')
+        if ($sublist && !$sublist.classList.contains('_active')) {
+            removeClasses('[data-subtrigger]', '_active')
+            $sublist.classList.add('_active')
+        } else {
+            removeClasses('[data-subtrigger]', '_active')
         }
     }
    

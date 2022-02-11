@@ -559,12 +559,6 @@ export function getDigFromString(item) {
 export function getDigFormat(item) {
 	return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
 }
-// Убрать класс из всех элементов массива
-export function removeClasses(array, className) {
-	for (var i = 0; i < array.length; i++) {
-		array[i].classList.remove(className);
-	}
-}
 // Уникализация массива
 export function uniqArray(array) {
 	return array.filter(function (item, index, self) {
@@ -754,3 +748,30 @@ export function setFileInputs() {
 	}
 }
 // ====================================================================================================
+
+export function isTarget (eventTarget, target) {
+	let $target
+	if (typeof target === 'string') {
+		$target = document.querySelector(target)
+	}
+	if ($target === eventTarget) {
+		return $target
+	} else if (eventTarget.closest(target)) {
+		return eventTarget.closest(target)
+	} else {
+		return false
+	}
+}
+
+export function removeClasses(array, className) {
+	let $array
+	if (typeof array === 'string') {
+		$array = document.querySelectorAll(array)
+	} else {
+		$array = array
+	}
+	for (var i = 0; i < $array.length; i++) {
+		$array[i].classList.remove(className);
+	}
+}
+
